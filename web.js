@@ -7,17 +7,17 @@ var fs=require('fs');
 fs.readFile('index.html', function (err, data) {
   if (err) throw err;
   console.log(data);
-respond.send(data.toString());
+respose.send(data.toString());
 });
 */
 
 app.get('/', function(request, response) {
-  response.send('Hello World 2!');
+ // response.send('Hello World 2!');
 var fs=require('fs');
 fs.readFile('index.html', function (err, data) {
-  if (err) throw err;
+response.send(data.toString());  
+if (err) throw err;
   console.log(data);
-respose.send(data.toString());
 });
 });
 
